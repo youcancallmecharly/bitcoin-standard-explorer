@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { quizData } from '../data/quizData';
 
 const KnowledgeCheck = () => {
   const { t } = useTranslation();
@@ -11,11 +10,16 @@ const KnowledgeCheck = () => {
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
+  // Get translated quiz data
+  const quizData = useMemo(() => {
+    return t('knowledgeCheck.questions', { returnObjects: true }) || [];
+  }, [t]);
+
   const handleAnswerSelect = (answer) => {
     setSelectedAnswer(answer);
     setShowExplanation(true);
     
-    if (answer === quizData[currentQuestion].correctAnswer) {
+    if (answer === quizData[currentQuestion]?.correctAnswer) {
       setScore(score + 1);
     }
   };
@@ -50,27 +54,29 @@ const KnowledgeCheck = () => {
 
         <div className="flex justify-center">
           <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8">
-            {!quizCompleted ? (
+            {!quizData || quizData.length === 0 ? (
+              <p className="text-center text-gray-500">Loading quiz...</p>
+            ) : !quizCompleted ? (
             <>
               <div className="mb-8 quiz-section">
                 <div className="flex justify-between text-sm text-gray-500 mb-2">
                   <span>{t('knowledgeCheck.question')} {currentQuestion + 1} {t('knowledgeCheck.of')} {quizData.length}</span>
                   <span>{t('knowledgeCheck.score')}: {score}/{quizData.length}</span>
                 </div>
-                <h3 className="text-xl font-quiz font-bold mb-6 quiz-question text-center">{quizData[currentQuestion].question}</h3>
+                <h3 className="text-xl font-quiz font-bold mb-6 quiz-question text-center">{quizData[currentQuestion]?.question}</h3>
                 
                 <div className="space-y-3">
-                  {quizData[currentQuestion].options.map((option, index) => (
+                  {quizData[currentQuestion]?.options?.map((option, index) => (
                     <button
                       key={index}
                       onClick={() => !selectedAnswer && handleAnswerSelect(option)}
                       disabled={selectedAnswer !== null}
                       className={`w-full text-left p-4 rounded-md border transition-colors quiz-option break-words overflow-visible ${
                         selectedAnswer === option
-                          ? option === quizData[currentQuestion].correctAnswer
+                          ? option === quizData[currentQuestion]?.correctAnswer
                             ? 'bg-green-100 border-green-500'
                             : 'bg-red-100 border-red-500'
-                          : selectedAnswer !== null && option === quizData[currentQuestion].correctAnswer
+                          : selectedAnswer !== null && option === quizData[currentQuestion]?.correctAnswer
                           ? 'bg-green-100 border-green-500'
                           : 'border-gray-300 hover:border-quiz-accent'
                       }`}
@@ -92,7 +98,7 @@ const KnowledgeCheck = () => {
                   >
                     <div className="bg-gray-100 p-4 rounded-md">
                       <h4 className="font-bold mb-2">{t('knowledgeCheck.explanation')}</h4>
-                      <p className="break-words overflow-visible" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>{quizData[currentQuestion].explanation}</p>
+                      <p className="break-words overflow-visible" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>{quizData[currentQuestion]?.explanation}</p>
                     </div>
                   </motion.div>
                 )}

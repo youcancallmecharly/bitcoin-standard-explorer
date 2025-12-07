@@ -141,7 +141,89 @@
     "perfectScore": "Perfekte Punktzahl! Sie haben ein ausgezeichnetes Verständnis von The Bitcoin Standard.",
     "greatJob": "Großartige Arbeit! Sie haben ein solides Verständnis von The Bitcoin Standard.",
     "reviewNeeded": "Sie sollten vielleicht einige Konzepte aus The Bitcoin Standard überprüfen.",
-    "retakeQuiz": "Quiz wiederholen"
+    "retakeQuiz": "Quiz wiederholen",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Wahr oder Falsch: Eine niedrige Zeitpräferenz fördert Sparen und langfristige Planung.",
+        "type": "truefalse",
+        "options": ["Wahr", "Falsch"],
+        "correctAnswer": "Wahr",
+        "explanation": "Dieses Konzept ist zentral für Ammous' Argumentation über solides Geld, das zukunftsorientiertes Denken fördert."
+      },
+      {
+        "id": 2,
+        "question": "Welche der folgenden Eigenschaften ist KEINE Eigenschaft, die Gold als Geld erfolgreich gemacht hat?",
+        "type": "multiple",
+        "options": ["Haltbarkeit", "Hohes Bestand-zu-Fluss-Verhältnis", "Leicht zu produzieren", "Teilbarkeit"],
+        "correctAnswer": "Leicht zu produzieren",
+        "explanation": "Die Schwierigkeit, Gold zu produzieren (hohes Bestand-zu-Fluss-Verhältnis) ist es, was es zu hartem Geld macht."
+      },
+      {
+        "id": 3,
+        "question": "Laut The Bitcoin Standard, welches Ereignis markierte das Ende des internationalen Goldstandards?",
+        "type": "multiple",
+        "options": ["Die Große Depression", "Der Erste Weltkrieg", "Nixons Aussetzung der Goldkonvertibilität 1971", "Die Finanzkrise 2008"],
+        "correctAnswer": "Nixons Aussetzung der Goldkonvertibilität 1971",
+        "explanation": "Der Nixon-Schock von 1971 beendete die letzte Verbindung zwischen dem Dollar und Gold."
+      },
+      {
+        "id": 4,
+        "question": "Wahr oder Falsch: Bitcoins Angebot kann erhöht werden, wenn die Nachfrage erheblich steigt.",
+        "type": "truefalse",
+        "options": ["Wahr", "Falsch"],
+        "correctAnswer": "Falsch",
+        "explanation": "Bitcoin hat eine feste Angebotsobergrenze von 21 Millionen Münzen, die unabhängig von der Nachfrage nicht geändert werden kann."
+      },
+      {
+        "id": 5,
+        "question": "Was identifiziert Ammous als die Hauptfunktion von Bitcoin?",
+        "type": "multiple",
+        "options": ["Tägliches Zahlungssystem", "Wertaufbewahrungsmittel", "Smart-Contract-Plattform", "Social-Media-Alternative"],
+        "correctAnswer": "Wertaufbewahrungsmittel",
+        "explanation": "Ammous argumentiert, dass Bitcoins primärer Wert als digitales solides Geld und Wertaufbewahrungsmittel liegt."
+      },
+      {
+        "id": 6,
+        "question": "Wahr oder Falsch: Inflation fördert Sparen und Kapitalakkumulation.",
+        "type": "truefalse",
+        "options": ["Wahr", "Falsch"],
+        "correctAnswer": "Falsch",
+        "explanation": "Inflation entmutigt Sparen, indem sie den Wert des Geldes im Laufe der Zeit mindert."
+      },
+      {
+        "id": 7,
+        "question": "Welche Wirtschaftsära bezeichnet Ammous als 'Die Belle Époque'?",
+        "type": "multiple",
+        "options": ["Die Zeit nach dem Zweiten Weltkrieg", "Die 1920er Jahre", "Die Zeit des klassischen Goldstandards (1871-1914)", "Die Renaissance"],
+        "correctAnswer": "Die Zeit des klassischen Goldstandards (1871-1914)",
+        "explanation": "Ammous identifiziert diese Zeit des soliden Geldes als eine Zeit beispiellosen Friedens und Wohlstands."
+      },
+      {
+        "id": 8,
+        "question": "Wahr oder Falsch: Laut Ammous ist Bitcoins Energieverbrauch verschwenderisch und ungerechtfertigt.",
+        "type": "truefalse",
+        "options": ["Wahr", "Falsch"],
+        "correctAnswer": "Falsch",
+        "explanation": "Ammous argumentiert, dass Bitcoins Energieverbrauch durch sein Wertversprechen als solides Geld gerechtfertigt ist."
+      },
+      {
+        "id": 9,
+        "question": "Was meint Ammous mit 'Verkäuflichkeit über die Zeit'?",
+        "type": "multiple",
+        "options": ["Die Fähigkeit, einen Vermögenswert schnell zu verkaufen", "Die Fähigkeit, Geld international zu transferieren", "Die Fähigkeit, den Wert über die Zeit zu erhalten", "Die Fähigkeit, Geld für verschiedene Zwecke zu verwenden"],
+        "correctAnswer": "Die Fähigkeit, den Wert über die Zeit zu erhalten",
+        "explanation": "Verkäuflichkeit über die Zeit bezieht sich darauf, dass Geld seine Kaufkraft über lange Zeiträume behält."
+      },
+      {
+        "id": 10,
+        "question": "Wahr oder Falsch: The Bitcoin Standard argumentiert, dass staatliche Kontrolle über Geld allgemein zu wirtschaftlichem Wohlstand geführt hat.",
+        "type": "truefalse",
+        "options": ["Wahr", "Falsch"],
+        "correctAnswer": "Falsch",
+        "explanation": "Ammous argumentiert, dass staatliche Kontrolle über Geld zu Inflation, Fehlinvestitionen und wirtschaftlicher Instabilität geführt hat."
+      }
+    ]
   },
   "chapterDetail": {
     "chapter": "Kapitel",
